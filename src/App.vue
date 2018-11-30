@@ -21,7 +21,9 @@
 export default {
   name: "app",
   data() {
-    return { delayed: false };
+    return {
+      delayed: false
+    };
   },
   mounted() {
     setTimeout(() => (this.delayed = true), 1000);
