@@ -10,12 +10,22 @@
     <p>Aenean viverra rhoncus pede. Maecenas egestas arcu quis ligula mattis placerat. Cras varius. Etiam sit amet orci eget eros faucibus tincidunt. Aenean massa.</p>
 
     <p>Nam at tortor in tellus interdum sagittis. Quisque id mi. Mauris sollicitudin fermentum libero. Morbi vestibulum volutpat enim. Praesent nonummy mi in odio.</p>
+
+    <div v-if="delayed" style="background:red;color:white;padding:100px;font-size:25px;font-weight:bold;">
+      Delayed render item.
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "app"
+  name: "app",
+  data() {
+    return { delayed: false };
+  },
+  mounted() {
+    setTimeout(() => (this.delayed = true), 1000);
+  }
 };
 </script>
 
