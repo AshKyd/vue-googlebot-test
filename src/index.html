@@ -7,6 +7,13 @@
  </head>
  <body>
    <div id="app"></div>
+   <pre id="errors"></pre>
+   <script>
+    window.onerror = function(message, url, line, column, error){
+      error = error || {};
+      document.querySelector('#errors').innerHTML = ['oh no, an error', error.message, error.stack].join('\n');
+    }
+   </script>
    <script src="index.js" async></script>
  </body>
 </html>
