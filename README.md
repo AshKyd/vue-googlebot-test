@@ -1,6 +1,6 @@
 # Google indexing status
 
-This repo contains a demo project using Vue, which is able to be rendered in the [fetch as Google](https://support.google.com/webmasters/answer/6066468?hl=en?utm_campaign=chrome_series_fetchgoogleweb_111717) tool.
+This repo contains a demo project using Vue, which can be rendered in the [fetch as Google](https://support.google.com/webmasters/answer/6066468?hl=en?utm_campaign=chrome_series_fetchgoogleweb_111717) tool.
 
 ## Resources
 
@@ -20,13 +20,13 @@ Google indexes Javascript generated content (up to an arbitrary time limit).
 ![Screenshot showing the dynamic Vue content loaded in the page](assets/screenshot.png)
 
 1.  The heading & lorem ipsum are rendered immediately when the script loads
-2.  The content in the red box loads after a 1 second delay.
+2.  The content in the red box loads after a 1 second delay
 
 ## Conclusion & caveats
 
 We can use client-only rendering for search engines.
 
-It's unclear whether we can use async data requests, but other articles indicate this increases risk of timeouts and thus no content being indexed. Instead we should bundle the data and load it at runtime, so it is available to render without any delay.
+It's unclear whether we can use async data requests, but other articles indicate this increases risk of timeouts and thus no content being indexed. Instead we should bundle the data and load it at runtime so it is available to render without any delay.
 
 Methods we might use include:
 
